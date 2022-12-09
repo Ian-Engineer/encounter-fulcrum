@@ -1,4 +1,3 @@
-import ErrorPage from "../main/error/ErrorPage";
 import routes from "./routes";
 
 const navigationConfig = [
@@ -6,7 +5,7 @@ const navigationConfig = [
     name: "Root",
     path: "/",
     element: <routes.Root />,
-    errorElement: <ErrorPage />,
+    errorElement: <routes.ErrorConfig />,
     children: [
       {
         name: "Initiative Tracker",
