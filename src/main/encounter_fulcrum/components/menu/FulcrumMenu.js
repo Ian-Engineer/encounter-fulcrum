@@ -5,7 +5,8 @@ import { Component, useEffect, useState } from "react";
 import MenuInput from "./MenuInput";
 import MenuDropDown from "./MenuDropdown";
 import MenuButton from "./MenuButton";
-import Wrapper from "../../components/Wrapper";
+import MenuModal from "./MenuModal";
+import Wrapper from "../../../components/Wrapper";
 
 const FulcrumMenu = () => {
   const [length, setLength] = useState("");
@@ -96,7 +97,16 @@ const FulcrumMenu = () => {
           description={"Load Characters"}
           open={loadCharacters}
           handleChange={setLoadCharacters}
-          modal={<div>hello</div>}
+          modal={
+            <MenuModal
+              list={characters}
+              handleSave={(payload) => setCharacters(payload)}
+              handleCancel={() => {
+                setLoadCharacters(false);
+              }}
+              title="characters"
+            />
+          }
         />
       ),
     },
@@ -106,7 +116,7 @@ const FulcrumMenu = () => {
 
   return (
     <div className="w-2/5 flex flex-col items-center m-5 border-2">
-      <Typography variant="h3">Menu</Typography>
+      <Typography variant="h3">Set up</Typography>
       <hr className="mb-5 mt-0 w-5/6" />
       <div className="w-5/6">
         {inputs.map((parameters) => {

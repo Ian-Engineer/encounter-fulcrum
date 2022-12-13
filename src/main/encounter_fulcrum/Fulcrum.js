@@ -3,8 +3,8 @@ import api from "../../api";
 import schema from "../../schema";
 import { useSelector, useDispatch } from "react-redux";
 import { setData } from "./store";
-import Battlemap from "./components/Battlemap";
-import FulcrumMenu from "./components/FulcrumMenu";
+import Battlemap from "./components/battlemap/Battlemap";
+import FulcrumMenu from "./components/menu/FulcrumMenu";
 
 const Fulcrum = () => {
   const dispatch = useDispatch();
