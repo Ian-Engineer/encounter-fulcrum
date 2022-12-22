@@ -1,4 +1,5 @@
-import { TextField } from "@mui/material";
+import { TextField, Tooltip } from "@mui/material";
+import HelpIcon from "@mui/icons-material/Help";
 
 const MenuInput = ({
   description,
@@ -7,9 +8,10 @@ const MenuInput = ({
   value,
   required,
   type,
+  tooltip,
 }) => {
   return (
-    <div className="mb-5">
+    <div className="mb-5 flex items-center">
       <TextField
         className="w-full flex item-center"
         label={description}
@@ -19,6 +21,9 @@ const MenuInput = ({
         required={required}
         type={type}
       />
+      <Tooltip title={tooltip}>
+        <HelpIcon className="m-2" />
+      </Tooltip>
     </div>
   );
 };

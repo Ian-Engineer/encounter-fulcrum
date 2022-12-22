@@ -1,9 +1,8 @@
 const dataDefault = {
-  shape: "",
   length: 0,
   width: 0,
   centerTolerance: 0,
-  extremeDifference: 0,
+  inertia: 0,
   totalWeight: 0,
   characters: [],
   baddies: [],
@@ -15,7 +14,6 @@ const dataDefault = {
 const weightedDefault = {
   name: "",
   weight: 0,
-  location: [0, 0],
 };
 
 const fulcrumSchema = { dataDefault, weightedDefault };
